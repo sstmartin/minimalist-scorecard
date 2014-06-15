@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Minimalist Scorecard</title>  
+  <title>My App</title>  
   
   <link rel="stylesheet" href="lib/onsen/css/onsenui.css">  
   <link rel="stylesheet" type="text/css" href="lib/onsen/css/topcoat-mobile-onsen-android4_4.css">
-  <link rel="stylesheet" href="styles/app.css"/>
+  <link rel="stylesheet" href="styles/app.css"/> 
 
   <script type="text/javascript" src="cordova.js"></script>
   <script src="lib/onsen/js/angular/angular.js"></script>    
   <script src="lib/onsen/js/onsenui.js"></script>    
   <script src="js/app.js"></script> 
-  <script src="js/controllers.js"></script>
-  <script src="js/services/js"></script>
   
 </head>
 
@@ -22,23 +20,10 @@
   
   <ons-screen>
 
-    <ons-tabbar>
-      <ons-tabbar-item
-              active="true"
-              label="Scorecard"
-              icon="pencil"
-              page="navigator.html"></ons-tabbar-item>
-
-      <ons-tabbar-item
-          label="Rounds"
-              icon="book"
-              page="rounds.html"></ons-tabbar-item>
-
-      <ons-tabbar-item
-          label="Settings"
-              icon="cogs"
-              page="settings.html"></ons-tabbar-item>
-    </ons-tabbar>
+    <ons-sliding-menu 
+      behind-page="menu.html" 
+      above-page="navigator1.html">
+    </ons-sliding-menu>
     
   </ons-screen>
  
