@@ -1,12 +1,36 @@
 <ons-page class="center">
-    <ons-navigator-toolbar title="ScoreCard">
-    </ons-navigator-toolbar>
 
-    <h2>New Round</h2>
+<ons-scroller class="center">
 
-    <ons-select ng-model="selectedValue">    
-      <option value="One">One</option>
-      <option value="Two">Two</option>
-      <option value="Three">Three</option>
-    </ons-select>
+    <ons-navigator-toolbar></ons-navigator-toolbar>
+
+    <h2>Choose Players</h2>
+
+    <div ng-controller="NewController" ng-enter="add(text)" style="padme">
+      {{ errorMsg }}
+      <h3>Saved Players</h3>
+
+      <div ng-repeat="player in players">
+        <ons-row>
+          <ons-col>{{ player }}</ons-col>
+          <ons-col><label class="topcoat-switch">
+            <input type="checkbox" class="topcoat-switch__input" checked>
+            <div class="topcoat-switch__toggle"></div></label>
+          </ons-col>
+        </ons-row><br>
+      </div>
+
+      <ons-text-input 
+        ng-model="text"
+        ng-hide="hidden"
+        placeholder="Enter New Player" 
+        style="width:80%;">
+      </ons-text-input>
+
+      <br><br>
+      <ons-button ng-click="ons.navigator.pushPage('page4.html', { title: 'Hole #1' })">
+			   Start Round!
+		  </ons-button>
+    </div>
+  </ons-scroller>
 </ons-page>

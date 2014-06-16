@@ -1,0 +1,17 @@
+<ons-page class="center">
+
+	<div ng-controller="HoleController">
+
+		<br><br>
+		<div ng-repeat="player in players">
+			<button class="topcoat-button">{{ player }}</button>
+			<br>
+		</div>
+
+		<br>
+		<ons-button ng-click="nextHole()">
+			{{ buttonMessage }}
+		</ons-button>
+	</div>
+
+</ons-page>
